@@ -1,0 +1,18 @@
+{
+  "name": "t-plus-interview",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.18.0"
+  },
+  "packageManager": "pnpm@11.15.1",
+  "scripts": {
+    "test": "node --test scripts/verify-bank.test.mjs",
+    "verify:partial": "node scripts/verify-bank.mjs --allow-incomplete",
+    "verify": "node scripts/verify-bank.mjs",
+    "verify:projects": "node scripts/verify-bank.mjs --projects",
+    "check": "pnpm test && pnpm verify",
+    "check:local": "pnpm check && pnpm verify:projects"
+  }
+}
